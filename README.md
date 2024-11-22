@@ -7,5 +7,6 @@ cd EXE
 chmod 777 SHAJON
 mv SHAJON /data/data/com.termux/files/usr/bin/
 cd
+rm -rf EXE
 clear
 ```
