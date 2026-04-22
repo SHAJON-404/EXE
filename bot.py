@@ -13,7 +13,8 @@ from telegram.ext import (
 
 # ── env ──────────────────────────────────────────────────────────────────────
 load_dotenv()
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
+_token = os.environ.get("BOT_TOKEN")
+BOT_TOKEN = _token.strip("\"'") if _token else None
 
 # ── logging ───────────────────────────────────────────────────────────────────
 logging.basicConfig(

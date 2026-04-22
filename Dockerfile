@@ -12,5 +12,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code
 COPY . .
 
-# Run the bot
-CMD ["python", "bot.py"]
+# Run the bot with unbuffered output so prints show up immediately
+CMD ["python", "-u", "bot.py"]
