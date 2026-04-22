@@ -18,7 +18,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN")
 # ── logging ───────────────────────────────────────────────────────────────────
 logging.basicConfig(
     format="%(asctime)s | %(levelname)s | %(message)s",
-    level=logging.INFO,
+    level=logging.WARNING,
 )
 logger = logging.getLogger(__name__)
 
@@ -80,7 +80,7 @@ def main() -> None:
     # catch-all: everything else gets rejected
     app.add_handler(MessageHandler(filters.ALL, handle_other))
 
-    logger.info("Bot is running…")
+    print("Bot is running...")
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 
